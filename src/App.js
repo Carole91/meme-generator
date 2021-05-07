@@ -32,7 +32,7 @@ function App() {
         console.log(response.data.data.memes)
       });
 
-      imageAreaRef.current.focus();
+      //imageAreaRef.current.focus();
 
   }, []);
 
@@ -48,12 +48,12 @@ function App() {
   }
 
   const exportImageHandler = () => {
-
-    console.log(`Image dom = ${imageAreaRef.current}`);
+    imageAreaRef.current.focus();
     
-    domtoimage.toJpeg(document.getElementsByClassName('meme-contents')[0], { quality: 0.95 })
+    console.log(selectedFile);
+    domtoimage.toJpeg(imageAreaRef.current, { quality: 0.95 })
     .then(function (dataUrl) {
-        var link = document.createElement('a');
+        let link = document.createElement('a');
         link.download = 'my-image-name.jpeg';
         link.href = dataUrl;
         link.click();
@@ -66,11 +66,11 @@ function App() {
       <br/>
       <div className="input-area">
         <div>
-          <label for = "first-title">First Title</label>
+          <label htmlFor = "first-title">First Title</label>
           <input onChange={(e)=>setFirstTitle(e.target.value)} value={firstTitle} name="first-title" id="first-title" type="text"/>
         </div>
         <div>
-          <label for = "second-title">Second Title</label>
+          <label htmlFor = "second-title">Second Title</label>
           <input onChange={(e)=>setSecondTitle(e.target.value)} value={secondTitle} name="second-title" id="second-title" type="text"/>
         </div>
       </div>
