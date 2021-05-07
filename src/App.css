@@ -1,0 +1,119 @@
+body {
+  /* background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); */
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+h1 {
+  text-align: center;
+  /* text-shadow: 2px 2px 0 #000; */
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-shadow: 0 1px 0 #efefef,
+    0 1px 0 #efefef,
+    0 2px 0 #efefef,
+    0 4px 0 #efefef,
+    0 20px 5px rgba(0, 0, 0, .4);
+  animation: float 3s linear infinite;
+  animation-direction: alternate;
+
+}
+
+@keyframes float{ 
+  from {transform: rotate(5deg)}
+  to {transform: rotate(-5deg)}
+
+}
+
+
+
+.input-area {
+  text-align: center;
+  margin: 20px auto;
+  border: 3px;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.input-area div {
+  padding: 10px;
+  display: block;
+}
+
+.input-area input,
+label {
+  padding: 10px;
+  border: 3px solid black;
+}
+
+.meme-contents {
+  position: relative;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  /*border: 5px solid black; */
+ }
+
+.meme-contents__meme-image {
+  max-width: 400px;
+  margin: 0 auto;
+  display: block; 
+  overflow: hidden;
+}
+
+.meme-contents__firstTitle {
+  position: absolute;
+  top: 40px;
+  
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+  /* border: 1px solid red; */
+  color: white;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.meme-contents__secondTitle {
+  position: absolute;
+  bottom: 0px;
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+  /* border: 1px solid yellow; */
+  color: white;
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.img-selections {
+  text-align: center;
+}
+
+.upload-area {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.export-image-area{
+  text-align: center;
+}
+
+button {
+  margin-top: 5px;
+  margin-right: 1px;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  border: 5px solid;
+  padding: 10px;
+  background-color: cornflowerblue;
+
+}
+
+.uploaded-image {
+  width: 200px;
+  height: 200px;
+}
